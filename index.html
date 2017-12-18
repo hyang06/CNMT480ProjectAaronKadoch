@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	
+    <title>Information Architecture: Collaboration Map</title>
+	
+	<!-- Load styles -->
+	<link href="css/styles.css" rel="stylesheet" type="text/css" />
+	
+	<!-- Load styles for vis.js edit -->
+    <link href="vis-4.21.0/dist/vis.css" rel="stylesheet" type="text/css" />
+	
+	<!-- Load vis.js library -->
+	<script type="text/javascript" src="vis-4.21.0/dist/vis.js"></script>
+	
+	<!-- Embed the Google API JavaScript loader -->
+    <script src="https://apis.google.com/js/api.js"></script>
+	
+	<!-- Load the utility library -->
+	<script type="text/javascript" src="js/realtime-utils-master/realtime-client-utils.js"></script>
+	
+	<div id="formBackground"></div>
+</head>
+<body>
+	<h1>Information Architecture: Collaboration Map</h1>
+	<div id="loader"></div>
+    <div id="mynetwork"></div>
+	
+	<div id="topFileDisplay">
+		<button id="rename_button">Rename File</button>
+		<h2 id="displayFileName"></h2>
+	</div>
+	
+	<div id="button_container">
+		<button id="auth_button">Sign In</button>
+		<button id="new_button">New File</button>
+		<button id="load_button">Load File</button>
+		<button id="share_button" onclick="initDriveShare()">Share File</button>
+	</div>
+	
+	<div id="network-NodepopUp">
+		<form>
+        <span id="operationNode">Topic</span><br>
+			<table>
+				<tr>
+					<td class="textSpace">Categories</td>
+					<td>
+						<select class="node-category" id="node-category" onchange="onCategoryInputChange()">
+							<option value=""></option>
+							<option value="Idea">Idea</option>
+							<option value="Material">Material</option>
+							<option value="Organization">Organization</option>
+							<option value="Person">Person</option>
+							<option value="Project">Project</option>
+							<option value="Service">Service</option>
+							<option value="System">System</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="textSpace">Map Types</td>
+					<td>
+						<select class="node-userInfo" id="node-userInfo" onchange="onMapInputChange()">
+							<option value=""></option>
+							<option value="Community Map">Community Map</option>
+							<option value="Geo Map">Geo Map</option>
+							<option value="Mind Map">Mind Map</option>
+							<option value="General Links">General Links</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="textSpace">Name</td>
+					<td><input class="node-label" id="node-label" maxlength="32" onkeyup="onLabelInputChange()"/></td>
+				</tr>
+				
+				<tr>
+					<td class="textSpace">Url</td>
+					<td><input class="node-url" type="text" id="node-url" onkeyup="onUrlInputChange()"/></td>
+				</tr>
+				
+				<tr>
+					<td class="textSpace">Description</td>
+					<td><textarea class="node-description" rows="4" cols="21" id="node-description" onkeyup="onDescriptionInputChange()"></textarea></td>
+				</tr>
+				
+				<tr>
+					<td class="textSpace">Address/Location</td>
+					<td><input class="node-location" id="node-location" onkeyup="onLocationInputChange()"/></td>
+				</tr>
+				
+				<tr>
+					<td class="textSpace">Collaborator(s)</td>
+				</tr>
+				
+				<tr>
+					<td class="textSpace">Name</td>
+					<td><input class="node-userName" id="node-userName" onkeyup="onUserNameInputChange()"/></td>
+				</tr>
+				
+				<tr>
+					<td class="textSpace">Email</td>
+					<td><input class="node-userEmail" id="node-userEmail" onkeyup="onUserEmailInputChange()"/></td>
+				</tr>
+			</table><br>
+			<input type="button" value="Add" id="saveNodeButton" />
+			<input type="button" value="Cancel" id="cancelNodeButton" />
+		</form>
+    </div>
+	
+	<div id="network-EdgepopUp">
+		<form>
+        <span id="operationEdge">Relationship</span> <br>
+			<table id="edgeTable">
+				<tr>
+					<td class="textSpace">Name</td>
+					<td><input class="edge-label" id="edge-label" maxlength="32" onkeyup="onEdgeLabelInputChange()"/></td>
+				</tr>
+				
+				<tr>
+					<td class="textSpace" id="textQualitative">Qualitative Categories</td>
+					<td>
+						<select class="edge-qualitative" id="edge-qualitative" onchange="onEdgeQualitativeInputChange()">
+							<option value=""></option>
+							<option value="Optimal">Optimal</option>
+							<option value="Required">Required</option>
+							<option value="Optional">Optional</option>
+							<option value="Neutral">Neutral</option>
+							<option value="Problematic">Problematic</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="textSpace" id="textQuantified">Quantified Categories</td>
+					<td>
+						<select class="edge-quantified" id="edge-quantified" onchange="onEdgeQuantifiedInputChange()">
+							<option value=""></option>
+							<option value="Cost">Cost</option>
+							<option value="Measurement">Measurement</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+			
+			<br>
+				
+			<table id="edgeTable2">
+				<tr class="rowWrap">
+					<td class="textSpace" id="textQuantity">Unit Quantity</td>
+					<td id="tdEdgeUnit"><input class="edge-unit" type="number" min="0.01" id="edge-unit" onkeyup="onEdgeUnitInputChange()"/></td>
+
+					<td class="indentSpace" id="textUOM">Unit of Measure</td>
+					<td>
+						<select class="edge-unitOfMeasure" id="edge-unitOfMeasure" onchange="onEdgeUnitOfMeasureInputChange()">
+							<option value=""></option>
+							<option value="Dollar(s)">Dollar(s)</option>
+							<option value="Number(s)">Number(s)</option>
+							<option value="Lb(s)">Lb(s)</option>
+							<option value="Feet">Feet</option>
+							<option value="Mile(s)">Mile(s)</option>
+							<option value="Hour(s)">Hour(s)</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="textSpace">=</td>
+				</tr>
+			</table>
+				
+			<table id="edgeTable3">
+				<tr class="rowWrap2">
+					<td class="textSpace" id="textQuantity2">Unit Quantity</td>
+					<td><input class="edge-unit2" type="number" min="0.01" id="edge-unit2" onkeyup="onEdgeUnit2InputChange()"/></td>
+					
+					<td class="indentSpace" id="textUOM2">Unit of Measure</td>
+					<td>
+						<select class="edge-unitOfMeasure2" id="edge-unitOfMeasure2" onchange="onEdgeUnitOfMeasure2InputChange()">
+							<option value=""></option>
+							<option value="Dollar(s)">Dollar(s)</option>
+							<option value="Number(s)">Number(s)</option>
+							<option value="Lb(s)">Lb(s)</option>
+							<option value="Feet">Feet</option>
+							<option value="Mile(s)">Mile(s)</option>
+							<option value="Hour(s)">Hour(s)</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+			
+			<br>
+			
+			<table id="edgeTable4">
+				<tr>
+					<td class="textSpace" id="textDescription">Description</td>
+					<td><textarea class="edge-description" rows="4" cols="21" id="edge-description" onkeyup="onEdgeDescriptionInputChange()"></textarea></td>
+				</tr>
+			</table><br>
+			<input type="button" value="Close" id="saveEdgeButton" />
+		</form>
+    </div>
+	
+	<div id="display_container">
+		<div id="sideNodeDisplay">
+			<form>
+				<span id="operationSideNodeDisplay"><b>Topic</b></span>
+				<table>
+					<tr>
+						<td class="textSpace"><b>Categories:</b></td>
+					</tr>
+					<tr>
+						<td class="textSpace" id="node-sideCategory"></td>
+					</tr>
+					
+					<tr>
+						<td class="textSpace"><b>Map Types:</b></td>
+					</tr>
+					<tr>
+						<td class="textSpace" id="node-sideUserInfo"></td>
+					</tr>
+					
+					<tr>
+						<td class="textSpace"><b>Name:</b></td>
+					</tr>
+					<tr>
+						<td class="textSpace" id="node-sideName" ></td>
+					</tr>
+					
+					<tr>
+						<td class="textSpace"><b>Url:</b></td>
+					</tr>
+					<tr>
+						<td class="textSpace" id="node-sideLink" ></td>
+					</tr>
+					
+					<tr>
+						<td class="textSpace"><b>Description:</b></td>
+					</tr>
+					<tr>
+						<td class="textSpace" id="node-sideDescription" ></td>
+					</tr>
+					
+					<tr>
+						<td class="textSpace"><b>Address/Location:</b></td>
+					</tr>
+					<tr>
+						<td class="textSpace" id="node-sideLocation"></td>
+					</tr>
+					
+					<tr>
+						<td class="textSpace"><b>Collaborator List</b></td>
+					</tr>
+					
+					<tr>
+						<td class="textSpace"><b>Name:</b></td>
+					</tr>
+					<tr>
+						<td class="textSpace" id="node-sideUserName" ></td>
+					</tr>
+					
+					<tr>
+						<td class="textSpace"><b>Email:</b></td>
+					</tr>
+					<tr>
+						<td class="textSpace" id="node-sideUserEmail"></td>
+					</tr>
+				</tr>
+				</table>
+			</form>
+		</div>
+		<div id="sideEdgeDisplay">
+			<form>
+				<span id="operationSideEdgeDisplay"><b>Relationship</b></span>
+				<table>
+					<tr>
+						<td class="textSpace"><b>Name:</b></td>
+					</tr>
+					<tr>
+						<td class="textSpace" id="edge-sideName" ></td>
+					</tr>
+					
+					<tr>
+						<td class="textSpace"><b>Qualitative Categories:</b></td>
+					</tr>
+					<tr>
+						<td class="textSpace" id="edge-sideQualitative" ></td>
+					</tr>
+					
+					<tr>
+						<td class="textSpace"><b>Quantified Categories:</b></td>
+					</tr>
+					<tr>
+						<td class="textSpace" id="edge-sideQuantified" ></td>
+					</tr>
+					
+					<tr>
+						<td class="textSpace"><b>Unit:</b></td>
+					</tr>
+					<tr>
+						<td class="textSpace" id="edge-sideUnit" ></td>
+					</tr>
+					
+					<tr>
+						<td class="textSpace"><b>Unit of Measure:</b></td>
+					</tr>
+					<tr>
+						<td class="textSpace" id="edge-sideUnitOfMeasure" ></td>
+					</tr>
+					
+					<tr>
+						<td class="textSpace"><b>Unit:</b></td>
+					</tr>
+					<tr>
+						<td class="textSpace" id="edge-sideUnit2" ></td>
+					</tr>
+					
+					<tr>
+						<td class="textSpace"><b>Unit of Measure:</b></td>
+					</tr>
+					<tr>
+						<td class="textSpace" id="edge-sideUnitOfMeasure2" ></td>
+					</tr>
+					
+					<tr>
+						<td class="textSpace"><b>Description:</b></td>
+					</tr>
+					<tr>
+						<td class="textSpace" id="edge-sideDescription" ></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+	
+	<div id="create-popUp">
+		<form>
+			<span id="operationCreate">Create</span> <br>
+			<table>
+				<tr>
+					<td class="textSpace">File</td>
+					<td><input id="file-name" value="" /></td>
+				</tr>
+			</table>
+			<input type="button" value="Add" id="saveCreateButton" />
+			<input type="button" value="Cancel" id="cancelCreateButton" />
+		</form>
+	</div>
+	
+<script type="text/javascript" src="js/googleApi.js"></script>
+<script type="text/javascript" src="js/visApi.js"></script>
+</body>
+</html>
