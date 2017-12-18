@@ -1,0 +1,2437 @@
+@media only screen and (min-device-width:1981px) {
+	html, body { 
+		width: 1980px;
+		height: 96%;
+	}
+
+	body {
+		background-color: #ffffff;
+		font-family:helvetica, sans-serif;
+		-webkit-user-select: none;     
+		-moz-user-select: none;
+		-ms-user-select: none;
+	}
+
+	h1 {
+		position: absolute;
+		width: 1700px;
+		height:52px;
+		font-size:56px;
+		margin-top:17px;
+		margin-left: 20px;
+		text-align: left;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	h2{
+		font-size: 26px;
+		float:left;
+	}
+
+	#topFileDisplay {
+		display:inline-block;
+		position: absolute;
+		height: 50px;
+		width: 1700px;
+		margin-top:17px;
+		margin-left:10px;
+		top:83px;
+		left: 20px;
+	}
+
+	#mynetwork {
+		display:inline-block;
+		position:absolute;
+		width: 1490px;
+		height: 790px;
+		border: 1px solid #d8d8d8;
+		background-color: #ffffff;
+		top:265px;
+		margin-left: 20px;
+	}
+
+	#button_container {
+		display:inline-block;
+		position:absolute;
+		text-align: right;
+		width:1492px;
+		height: 96px;
+		top: 177px;
+		margin-left:19px;
+		background-color: #e8e8e8;
+	}
+
+	#rename_button {
+		display:inline-block;
+		position:relative;
+		width: 165px;
+		height: 46px;
+		font-size: 23px;
+		border-style: none;
+		border-radius: 6px;
+		padding: 2px 2px 2px 2px;
+	}
+	
+	#new_button {
+		float: left;
+	}
+	
+	#load_button{
+		float:left;
+	}
+	
+	#share_button{
+		float:left;
+	}
+	
+	#auth_button {
+		float: right;
+	}
+
+	#auth_button, #new_button, #load_button, #share_button {
+		background-color: #e8e8e8;
+		display:inline-block;
+		width: 165px;
+		height: 96px;
+		font-size: 23px;
+		border-style: none;
+	}
+
+	#rename_button:hover, #auth_button:hover, #new_button:hover, 
+	#load_button:hover, #share_button:hover, #saveNodeButton:hover, 
+	#cancelNodeButton:hover, #saveEdgeButton:hover, #saveCreateButton:hover, #cancelCreateButton:hover{
+		background-color:#d0d0d0;
+	}
+
+	#rename_button:focus, #auth_button:focus, #new_button:focus, 
+	#load_button:focus, #share_button:focus, #saveNodeButton:focus, 
+	#cancelNodeButton:focus, #saveEdgeButton:focus, #saveCreateButton:focus, #cancelCreateButton:focus {
+		outline: 0;
+	}
+
+	#operationCreate {
+		display:inline-block;
+		width: 100%;
+		height: 17px;
+		padding-bottom: 34px;
+		text-align: center;
+	}
+
+	#formBackground {
+		display:none;
+		width:100%;
+		height:100%;
+		position:fixed;
+		z-index: 3;
+		background-color: rgba(255, 255, 255, 0.4);
+		top:0;
+		left:0;
+	}
+
+	#display_container {
+		display:none;
+		position: absolute;
+		z-index:1;
+		top: 177px;
+		left: 1550px;
+		width: 413px;
+		font-size: 23px;
+		border: 1px solid #000000;
+		border-radius: 6px;
+		padding-bottom: 17px;
+		word-wrap: break-word;
+		word-break: break-word;
+		background-color: #ffffff;
+		overflow: hidden;
+		clear: both;
+	}
+
+	#operationSideNodeDisplay {
+		display:inline-block;
+		width: 100%;
+		height: 24px;
+		text-align: center;
+	}
+
+	#operationSideEdgeDisplay {
+		display:inline-block;
+		width: 100%;
+		height: 17px;
+		text-align: center;
+	}
+
+	#operationNode {
+		display:inline-block;
+		width: 100%;
+		height: 17px;
+		padding-bottom: 34px;
+		text-align: center;
+	}
+
+	#operationEdge {
+		display:inline-block;
+		width: 100%;
+		height: 17px;
+		padding-bottom: 34px;
+		text-align: center;
+	}
+
+	#sideNodeDisplay {
+		width:100%;
+		display: none;
+	}
+
+	#sideEdgeDisplay {
+		width: 100%;
+		display: none;
+	}
+
+	#network-NodepopUp {
+		display: none;
+		position: absolute;
+		height: 818px;
+		width: 611px;
+		background-color: #f9f9f9;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #5394ed;
+		z-index: 999;
+		font-size:23px;
+		border-radius: 6px;
+		padding-left: 17px;
+		padding-right: 17px;
+		padding-bottom: 17px;
+		left: 751px;
+		margin-top: 86px;
+	}
+
+	#network-EdgepopUp {
+		display: none;
+		position: absolute;
+		width: 726px;
+		height: 736px;
+		background-color: #f9f9f9;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #5394ed;
+		z-index: 999;
+		border-radius: 6px;
+		font-size:23px;
+		padding-left: 17px;
+		padding-right: 17px;
+		padding-bottom: 17px;
+		left: 635px;
+		margin-top:127px;
+	}
+
+	#create-popUp {
+		display: none;
+		position: absolute;
+		height: 297px;
+		width: 446px;
+		background-color: #f9f9f9;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #5394ed;
+		z-index: 999;
+		border-radius: 6px;
+		font-size:23px;
+		padding-left: 17px;
+		padding-right: 17px;
+		padding-bottom: 17px;
+		left: 875px;
+		margin-top: 347px;
+	}
+
+	#operationNode, #operationEdge, #operationCreate {
+		padding-top: 34px;
+		margin-bottom: 25px;
+		font-size:23px;
+	}
+
+	.textSpace, .indentSpace {
+		padding-left: 17px;
+	}
+
+	#edgeTable2, #edgeTable3, #edgeTable4 {
+		border-collapse: collapse;
+	}
+
+	.rowWrap, .rowWrap2 {
+		width: 100%;
+	}
+
+	.rowWrap #tdEdgeUnit {
+		width: 132px;
+		margin: 0px;
+	}
+
+	.rowWrap2 #tdEdgeUnit2 {
+		width: 132px;
+		margin-bottom: 10px;
+	}
+
+	.rowWrap #textQuantity {
+		width: 162px;
+		margin: 0px;
+	}
+
+	.rowWrap2 #textQuantity2 {
+		width: 162px;
+		margin-bottom: 10px;
+	}
+
+	.rowWrap #textUOM {
+		width: 198px;
+		margin: 0px;
+	}
+
+	.rowWrap2 #textUOM2 {
+		width: 198px;
+		margin-bottom: 17px;
+	}
+
+	.edge-unit {
+		width: 132px;
+		margin-left: 17px;
+		font-size:23px;
+	}
+
+	.edge-unit2 {
+		width: 132px;
+		margin-left: 17px;
+		margin-bottom: 17px;
+		font-size:23px;
+	}
+
+	#textDescription {
+		width: 162px;
+	}
+
+	.node-label, .node-url,
+	.node-location, .node-userName, .node-userEmail,
+	.node-category, .node-userInfo, .edge-label,
+	.edge-qualitative, .edge-quantified,
+	#file-name {
+		height:25px;
+		font-size:23px;
+		margin-bottom: 17px;
+		margin-left: 17px;
+	}
+	
+	.node-description{
+		height:150px;
+		font-size:23px;
+		margin-bottom: 17px;
+		margin-left: 17px
+	}
+
+	.edge-label{
+		width: 330px;
+	}
+
+	.edge-description {
+		width: 446px;
+		height:150px;
+		font-size:23px;
+		margin-bottom: 17px;
+		margin-left: 17px;
+	}
+
+	.edge-unitOfMeasure, .edge-unitOfMeasure2 {
+		font-size:23px;
+	}
+	
+	.edge-qualitative, .edge-quantified {
+		width:198px;
+	}
+
+	#file-name, .node-label, .node-url, .node-description,
+	.node-location, .node-userName, .node-userEmail {
+		width: 330px;
+	}
+
+	#saveNodeButton, #cancelNodeButton,
+	#saveEdgeButton, #saveCreateButton, #cancelCreateButton {
+		width: 116px;
+		height: 51px;
+		font-size: 23px;
+		border-style: none;
+		border-radius: 6px;
+		margin-top: 34px;
+		margin-left: 17px;
+	}
+
+	.node-description, .edge-description {
+		resize: none;
+	}
+
+	.node-category, .node-userInfo {
+		width: 215px;
+	}
+
+	.visible {
+		visibility: visible;
+	}
+
+	.invisible {
+		visibility: hidden;
+	}
+
+	#loader {
+		display: none;
+		position: absolute;
+		width: 99px;
+		height: 99px;
+		z-index:1;
+		border: 16px solid #f3f3f3;
+		border-radius: 50%;
+		border-top: 16px solid #3498db;
+		top: 561px;
+		left:705px;;
+		-webkit-animation: spin 1s linear infinite; /* Safari */
+		animation: spin 1s linear infinite;
+	}
+
+	/* Safari */
+	@-webkit-keyframes spin {
+		0% { -webkit-transform: rotate(0deg); }
+		100% { -webkit-transform: rotate(360deg); }
+	}
+
+	@keyframes spin {
+		0% { transform: rotate(0deg); }
+		100% { transform: rotate(360deg); }
+	}
+}
+
+@media only screen and (min-device-width:1601px) and (max-device-width:1980px) {
+	html, body { 
+		width: 1600px;
+		height: 96%;
+	}
+
+	body {
+		background-color: #ffffff;
+		font-family:helvetica, sans-serif;
+		-webkit-user-select: none;     
+		-moz-user-select: none;
+		-ms-user-select: none;
+	}
+
+	h1 {
+		position: absolute;
+		width: 1100px;
+		height:42px;
+		font-size:45px;
+		margin-top:14px;
+		margin-left: 16px;
+		text-align: left;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	h2{
+		font-size: 21px;
+		float:left;
+	}
+
+	#topFileDisplay {
+		display:inline-block;
+		position: absolute;
+		height: 41px;
+		width: 1100px;
+		margin-top:14px;
+		margin-left:8px;
+		top:67px;
+		left: 16px;
+	}
+
+	#mynetwork {
+		display:inline-block;
+		position:absolute;
+		width: 1223px;
+		height: 578px;
+		border: 1px solid #d8d8d8;
+		background-color: #ffffff;
+		top:234px;
+		margin-left: 16px;
+	}
+
+	#button_container {
+		display:inline-block;
+		position:absolute;
+		text-align: right;
+		width:1225px;
+		height: 88px;
+		top: 146px;
+		margin-left:16px;
+		background-color: #e8e8e8;
+	}
+	
+	#new_button {
+		float: left;
+	}
+	
+	#load_button{
+		float:left;
+	}
+	
+	#share_button{
+		float:left;
+	}
+	
+	#auth_button {
+		float: right;
+	}
+
+	#rename_button {
+		display:inline-block;
+		position:relative;
+		width: 134px;
+		height: 37px;
+		font-size: 19px;
+		border-style: none;
+		border-radius: 6px;
+		padding: 2px 2px 2px 2px;
+		background-color: #e8e8e8;
+	}
+
+	#auth_button, #new_button, #load_button, #share_button {
+		background-color: #e8e8e8;
+		display:inline-block;
+		width: 100px;
+		height: 88px;
+		font-size: 19px;
+		border-style: none;
+	}
+
+	#rename_button:hover, #auth_button:hover, #new_button:hover, 
+	#load_button:hover, #share_button:hover, #saveNodeButton:hover, 
+	#cancelNodeButton:hover, #saveEdgeButton:hover, #saveCreateButton:hover, #cancelCreateButton:hover {
+		background-color:#d0d0d0;
+	}
+
+	#rename_button:focus, #auth_button:focus, #new_button:focus, 
+	#load_button:focus, #share_button:focus, #saveNodeButton:focus, 
+	#cancelNodeButton:focus, #saveEdgeButton:focus, #saveCreateButton:focus, #cancelCreateButton:focus {
+		outline: 0;
+	}
+
+	#operationCreate {
+		display:inline-block;
+		width: 100%;
+		height: 14px;
+		padding-bottom: 28px;
+		text-align: center;
+	}
+
+	#formBackground {
+		display:none;
+		width:100%;
+		height:100%;
+		position:fixed;
+		z-index: 3;
+		background-color: rgba(255, 255, 255, 0.4);
+		top:0;
+		left:0;
+	}
+
+	#display_container {
+		display:none;
+		position: absolute;
+		z-index:1;
+		top: 146px;
+		left: 1269px;
+		width: 313px;
+		font-size: 17px;
+		border: 1px solid #000000;
+		border-radius: 6px;
+		padding-bottom: 10px;
+		word-wrap: break-word;
+		word-break: break-word;
+		background-color: #ffffff;
+		overflow: hidden;
+		clear: both;
+	}
+
+	#operationSideNodeDisplay {
+		display:inline-block;
+		width: 100%;
+		height: 19px;
+		text-align: center;
+	}
+
+	#operationSideEdgeDisplay {
+		display:inline-block;
+		width: 100%;
+		height: 14px;
+		text-align: center;
+	}
+
+	#operationNode {
+		display:inline-block;
+		width: 100%;
+		height: 14px;
+		padding-bottom: 28px;
+		text-align: center;
+	}
+
+	#operationEdge {
+		display:inline-block;
+		width: 100%;
+		height: 14px;
+		padding-bottom: 28px;
+		text-align: center;
+	}
+
+	#sideNodeDisplay {
+		width:100%;
+		display: none;
+	}
+
+	#sideEdgeDisplay {
+		width: 100%;
+		display: none;
+	}
+
+	#network-NodepopUp {
+		display: none;
+		position: absolute;
+		height: 663px;
+		width: 535px;
+		background-color: #f9f9f9;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #5394ed;
+		z-index: 999;
+		font-size:19px;
+		border-radius: 6px;
+		padding-left: 14px;
+		padding-right: 14px;
+		padding-bottom: 14px;
+		left: 608px;
+		margin-top: 70px;
+	}
+
+	#network-EdgepopUp {
+		display: none;
+		position: absolute;
+		width: 588px;
+		height: 596px;
+		background-color: #f9f9f9;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #5394ed;
+		z-index: 999;
+		border-radius: 6px;
+		font-size:19px;
+		padding-left: 14px;
+		padding-right: 14px;
+		padding-bottom: 14px;
+		left: 514px;
+		margin-top:103px;
+	}
+
+	#create-popUp {
+		display: none;
+		position: absolute;
+		height: 241px;
+		width: 361px;
+		background-color: #f9f9f9;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #5394ed;
+		z-index: 999;
+		border-radius: 6px;
+		font-size:19px;
+		padding-left: 14px;
+		padding-right: 14px;
+		padding-bottom: 14px;
+		left: 709px;
+		margin-top: 281px;
+	}
+
+	#operationNode, #operationEdge, #operationCreate {
+		padding-top: 28px;
+		margin-bottom: 20px;
+		font-size:19px;
+	}
+
+	.textSpace, .indentSpace {
+		padding-left: 14px;
+	}
+
+	#edgeTable2, #edgeTable3, #edgeTable4 {
+		border-collapse: collapse;
+	}
+
+	.rowWrap, .rowWrap2 {
+		width: 100%;
+	}
+
+	.rowWrap #tdEdgeUnit {
+		width: 107px;
+		margin: 0px;
+	}
+
+	.rowWrap2 #tdEdgeUnit2 {
+		width: 107px;
+		margin-bottom: 8px;
+	}
+
+	.rowWrap #textQuantity {
+		width: 131px;
+		margin: 0px;
+	}
+
+	.rowWrap2 #textQuantity2 {
+		width: 131px;
+		margin-bottom: 8px;
+	}
+
+	.rowWrap #textUOM {
+		width: 160px;
+		margin: 0px;
+	}
+
+	.rowWrap2 #textUOM2 {
+		width: 160px;
+		margin-bottom: 14px;
+	}
+
+	.edge-unit {
+		width: 107px;
+		margin-left: 14px;
+		font-size:19px;
+	}
+
+	.edge-unit2 {
+		width: 107px;
+		margin-left: 14px;
+		margin-bottom: 14px;
+		font-size:19px;
+	}
+
+	#textDescription {
+		width: 131px;
+	}
+
+	.node-label, .node-url,
+	.node-location, .node-userName, .node-userEmail,
+	.node-category, .node-userInfo, .edge-label,
+	.edge-qualitative, .edge-quantified,
+	#file-name {
+		height:20px;
+		font-size:19px;
+		margin-bottom: 14px;
+		margin-left: 14px;
+	}
+	
+	.node-description{
+		height:122px;
+		font-size:19px;
+		margin-bottom: 14px;
+		margin-left: 14px
+	}
+
+	.edge-label{
+		width: 267px;
+	}
+
+	.edge-description {
+		width: 361px;
+		height:122px;
+		font-size:19px;
+		margin-bottom: 14px;
+		margin-left: 14px;
+	}
+
+	.edge-unitOfMeasure, .edge-unitOfMeasure2 {
+		font-size:19px;
+	}
+	
+	.edge-qualitative, .edge-quantified {
+		width:160px;
+	}
+
+	#file-name, .node-label, .node-url, .node-description,
+	.node-location, .node-userName, .node-userEmail {
+		width: 267px;
+	}
+
+	#saveNodeButton, #cancelNodeButton, 
+	#saveEdgeButton, #saveCreateButton, #cancelCreateButton {
+		width: 94px;
+		height: 41px;
+		font-size: 19px;
+		border-style: none;
+		border-radius: 6px;
+		margin-top: 28px;
+		margin-left: 14px;
+	}
+
+	.node-description, .edge-description {
+		resize: none;
+	}
+
+	.node-category, .node-userInfo {
+		width: 174px;
+	}
+
+	.visible {
+		visibility: visible;
+	}
+
+	.invisible {
+		visibility: hidden;
+	}
+
+	#loader {
+		display: none;
+		position: absolute;
+		width: 80px;
+		height: 80px;
+		z-index:1;
+		border: 16px solid #f3f3f3;
+		border-radius: 50%;
+		border-top: 16px solid #3498db;
+		top: 426px;
+		left:580px;;
+		-webkit-animation: spin 1s linear infinite; /* Safari */
+		animation: spin 1s linear infinite;
+	}
+
+	/* Safari */
+	@-webkit-keyframes spin {
+		0% { -webkit-transform: rotate(0deg); }
+		100% { -webkit-transform: rotate(360deg); }
+	}
+
+	@keyframes spin {
+		0% { transform: rotate(0deg); }
+		100% { transform: rotate(360deg); }
+	}
+}
+
+@media only screen and (min-device-width:1281px) and (max-device-width:1600px) { 
+	html, body { 
+		width: 1280px;
+		height: 96%;
+	}
+
+	body {
+		background-color: #ffffff;
+		font-family:helvetica, sans-serif;
+		-webkit-user-select: none;     
+		-moz-user-select: none;
+		-ms-user-select: none;
+	}
+
+	h1 {
+		position: absolute;
+		width: 900px;
+		height:32px;
+		font-size: 34px;
+		margin-top:10px;
+		margin-left: 20px;
+		text-align: left;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	h2{
+		font-size: 16px;
+		float:left;
+	}
+
+	#topFileDisplay {
+		display:inline-block;
+		position: absolute;
+		height: 30px;
+		width: 900px;
+		margin-top:10px;
+		margin-left:10px;
+		top:50px;
+		left: 20px;
+	}
+
+	#mynetwork {
+		display:inline-block;
+		position:absolute;
+		width: 1050px;
+		height: 490px;
+		border: 1px solid #d8d8d8;
+		background-color: #ffffff;
+		top:150px;
+		margin-left: 20px;
+	}
+
+	#button_container {
+		display:inline-block;
+		position:absolute;
+		text-align: right;
+		width:1052px;
+		height: 52px;
+		top: 98px;
+		margin-left:20px;
+		background-color: #e8e8e8;
+	}
+
+	#rename_button {
+		display:inline-block;
+		position:relative;
+		width: 100px;
+		height: 28px;
+		font-size: 14px;
+		border-style: none;
+		border-radius: 6px;
+		background-color: #e8e8e8;
+	}
+	
+	#new_button {
+		float: left;
+	}
+	
+	#load_button{
+		float:left;
+	}
+	
+	#share_button{
+		float:left;
+	}
+	
+	#auth_button {
+		float: right;
+	}
+
+	#auth_button, #new_button, #load_button, #share_button {
+		background-color: #e8e8e8;
+		display:inline-block;
+		width: 100px;
+		height: 52px;
+		font-size: 16px;
+		border-style: none;
+	}
+
+	#rename_button:hover, #auth_button:hover, #new_button:hover, 
+	#load_button:hover, #share_button:hover, #saveNodeButton:hover, 
+	#cancelNodeButton:hover, #saveEdgeButton:hover, #saveCreateButton:hover, #cancelCreateButton:hover {
+		background-color:#d0d0d0;
+	}
+
+	#rename_button:focus, #auth_button:focus, #new_button:focus, 
+	#load_button:focus, #share_button:focus, #saveNodeButton:focus, 
+	#cancelNodeButton:focus, #saveEdgeButton:focus, #saveCreateButton:focus, #cancelCreateButton:focus {
+		outline: 0;
+	}
+
+	#operationCreate {
+		display:inline-block;
+		width: 100%;
+		height: 10px;
+		padding-bottom: 20px;
+		text-align: center;
+	}
+
+	#formBackground {
+		display:none;
+		width:100%;
+		height:100%;
+		position:fixed;
+		z-index: 3;
+		background-color: rgba(255, 255, 255, 0.4);
+		top:0;
+		left:0;
+	}
+
+	#display_container {
+		display:none;
+		position: absolute;
+		z-index:1;
+		top: 92px;
+		left: 1090px;
+		width: 250px;
+		font-size: 14px;
+		border: 1px solid #000000;
+		border-radius: 6px;
+		padding-bottom: 10px;
+		word-wrap: break-word;
+		word-break: break-word;
+		background-color: #ffffff;
+		overflow: hidden;
+		clear: both;
+	}
+
+	#operationSideNodeDisplay {
+		display:inline-block;
+		width: 100%;
+		height: 20px;
+		text-align: center;
+	}
+
+	#operationSideEdgeDisplay {
+		display:inline-block;
+		width: 100%;
+		height: 10px;
+		text-align: center;
+	}
+
+	#operationNode {
+		display:inline-block;
+		width: 100%;
+		height: 10px;
+		padding-bottom: 20px;
+		text-align: center;
+	}
+
+	#operationEdge {
+		display:inline-block;
+		width: 100%;
+		height: 10px;
+		padding-bottom: 20px;
+		text-align: center;
+	}
+
+	#sideNodeDisplay {
+		width:100%;
+		display: none;
+	}
+
+	#sideEdgeDisplay {
+		width: 100%;
+		display: none;
+	}
+
+	#network-NodepopUp {
+		display: none;
+		position: absolute;
+		height: 496px;
+		width: 370px;
+		background-color: #f9f9f9;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #5394ed;
+		z-index: 999;
+		border-radius: 6px;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 10px;
+		left: 455px;
+		margin-top: 52px;
+	}
+
+	#network-EdgepopUp {
+		display: none;
+		position: absolute;
+		width: 440px;
+		height: 446px;
+		background-color: #f9f9f9;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #5394ed;
+		z-index: 999;
+		border-radius: 6px;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 10px;
+		left: 385px;
+		margin-top:77px;
+	}
+
+	#create-popUp {
+		display: none;
+		position: absolute;
+		height: 180px;
+		width: 270px;
+		background-color: #f9f9f9;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #5394ed;
+		z-index: 999;
+		border-radius: 6px;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 10px;
+		left: 530px;
+		margin-top: 210px;
+	}
+
+	#operationNode, #operationEdge, #operationCreate {
+		padding-top: 20px;
+		margin-bottom: 15px;
+	}
+
+	.textSpace, .indentSpace {
+		padding-left: 10px;
+	}
+
+	#edgeTable2, #edgeTable3, #edgeTable4 {
+		border-collapse: collapse;
+	}
+
+	.rowWrap, .rowWrap2 {
+		width: 100%;
+	}
+
+	.rowWrap #tdEdgeUnit {
+		width: 80px;
+		margin: 0px;
+	}
+
+	.rowWrap2 #tdEdgeUnit2 {
+		width: 80px;
+		margin-bottom: 10px;
+	}
+
+	.rowWrap #textQuantity {
+		width: 98px;
+		margin: 0px;
+	}
+
+	.rowWrap2 #textQuantity2 {
+		width: 98px;
+		margin-bottom: 10px;
+	}
+
+	.rowWrap #textUOM {
+		width: 120px;
+		margin: 0px;
+	}
+
+	.rowWrap2 #textUOM2 {
+		width: 120px;
+		margin-bottom: 10px;
+	}
+
+	.edge-unit {
+		width: 80px;
+		margin-left: 10px;
+	}
+
+	.edge-unit2 {
+		width: 80px;
+		margin-left: 10px;
+		margin-bottom: 10px;
+	}
+
+	#textDescription {
+		width: 98px;
+	}
+
+	.node-label, .node-url, .node-description,
+	.node-location, .node-userName, .node-userEmail,
+	.node-category, .node-userInfo, .edge-label,
+	.edge-qualitative, .edge-description, .edge-quantified,
+	#file-name {
+		margin-bottom: 10px;
+		margin-left: 10px;
+	}
+
+	.edge-label{
+		width: 200px;
+	}
+
+	.edge-description {
+		width: 270px;
+	}
+
+	.edge-qualitative, .edge-quantified {
+		width:120px;
+	}
+
+	#file-name, .node-label, .node-url, .node-description,
+	.node-location, .node-userName, .node-userEmail {
+		width: 200px;
+	}
+
+	#saveNodeButton, #cancelNodeButton, 
+	#saveEdgeButton, #saveCreateButton, #cancelCreateButton {
+		width: 70px;
+		height: 30px;
+		font-size: 14px;
+		border-style: none;
+		border-radius: 6px;
+		margin-top: 20px;
+		margin-left: 10px;
+	}
+
+	.node-description, .edge-description {
+		resize: none;
+	}
+
+	.node-category, .node-userInfo {
+		width: 130px;
+	}
+
+	.visible {
+		visibility: visible;
+	}
+
+	.invisible {
+		visibility: hidden;
+	}
+
+	#loader {
+		display: none;
+		position: absolute;
+		width: 60px;
+		height: 60px;
+		z-index:1;
+		border: 16px solid #f3f3f3;
+		border-radius: 50%;
+		border-top: 16px solid #3498db;
+		top: 306px;
+		left:510px;;
+		-webkit-animation: spin 1s linear infinite; /* Safari */
+		animation: spin 1s linear infinite;
+	}
+
+	/* Safari */
+	@-webkit-keyframes spin {
+		0% { -webkit-transform: rotate(0deg); }
+		100% { -webkit-transform: rotate(360deg); }
+	}
+
+	@keyframes spin {
+		0% { transform: rotate(0deg); }
+		100% { transform: rotate(360deg); }
+	}
+}
+
+@media only screen and (min-device-width:961px) and (max-device-width:1280px) { 
+	html, body { 
+		width: 960px;
+		height: 96%;
+	}
+
+	body {
+		background-color: #ffffff;
+		font-family:helvetica, sans-serif;
+		-webkit-user-select: none;     
+		-moz-user-select: none;
+		-ms-user-select: none;
+	}
+
+	h1 {
+		position: absolute;
+		width: 600px;
+		height:30px;
+		font-size:27px;
+		margin-top:8px;
+		margin-left: 6px;
+		text-align: left;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	h2{
+		font-size: 16px;
+		float:left;
+	}
+	
+	#mynetwork {
+		display:inline-block;
+		position:absolute;
+		width: 770px;
+		height: 480px;
+		border: 1px solid #d8d8d8;
+		background-color: #ffffff;
+		top:152px;
+		margin-left: 6px;
+	}
+
+	#topFileDisplay {
+		display:inline-block;
+		position: absolute;
+		height: 25px;
+		width: 500px;
+		margin-top:18px;
+		margin-left:6px;
+		top:40px;
+	}
+
+	#button_container {
+		display:inline-block;
+		position:absolute;
+		text-align: right;
+		width:772px;
+		height: 52px;
+		top: 100px;
+		margin-left:6px;
+		background-color: #e8e8e8;
+	}
+
+	#rename_button {
+		display:inline-block;
+		position:relative;
+		width: 116px;
+		height: 34px;
+		font-size: 16px;
+		border-style: none;
+		border-radius: 6px;
+		padding: 2px 2px 2px 2px;
+	}
+	
+	#new_button {
+		float: left;
+	}
+	
+	#load_button{
+		float:left;
+	}
+	
+	#share_button{
+		float:left;
+	}
+	
+	#auth_button {
+		float: right;
+	}
+
+	#auth_button, #new_button, #load_button, #share_button {
+		background-color: #e8e8e8;
+		display:inline-block;
+		width: 100px;
+		height: 52px;
+		font-size: 16px;
+		border-style: none;
+	}
+
+	#rename_button:hover, #auth_button:hover, #new_button:hover, 
+	#load_button:hover, #share_button:hover, #saveNodeButton:hover, 
+	#cancelNodeButton:hover, #saveEdgeButton:hover, #saveCreateButton:hover, #cancelCreateButton:hover {
+		background-color:#d0d0d0;
+	}
+
+	#rename_button:focus, #auth_button:focus, #new_button:focus, 
+	#load_button:focus, #share_button:focus, #saveNodeButton:focus, 
+	#cancelNodeButton:focus, #saveEdgeButton:focus, #saveCreateButton:focus, #cancelCreateButton:focus {
+		outline: 0;
+	}
+
+	#operationCreate {
+		display:inline-block;
+		width: 100%;
+		height: 8px;
+		padding-bottom: 17px;
+		text-align: center;
+	}
+
+	#formBackground {
+		display:none;
+		width:100%;
+		height:100%;
+		position:fixed;
+		z-index: 3;
+		background-color: rgba(255, 255, 255, 0.4);
+		top:0;
+		left:0;
+	}
+
+	#display_container {
+		display:none;
+		position: absolute;
+		z-index:1;
+		top: 100px;
+		left: 810px;
+		width: 201px;
+		font-size: 14px;
+		border: 1px solid #000000;
+		border-radius: 6px;
+		padding-bottom: 8px;
+		word-wrap: break-word;
+		word-break: break-word;
+		background-color: #ffffff;
+		overflow: hidden;
+		clear: both;
+	}
+
+	#operationSideNodeDisplay {
+		display:inline-block;
+		width: 100%;
+		height: 19px;
+		text-align: center;
+	}
+
+	#operationSideEdgeDisplay {
+		display:inline-block;
+		width: 100%;
+		height: 14px;
+		text-align: center;
+	}
+
+	#operationNode {
+		display:inline-block;
+		width: 100%;
+		height: 14px;
+		padding-bottom: 28px;
+		text-align: center;
+	}
+
+	#operationEdge {
+		display:inline-block;
+		width: 100%;
+		height: 14px;
+		padding-bottom: 28px;
+		text-align: center;
+	}
+
+	#sideNodeDisplay {
+		width:100%;
+		display: none;
+	}
+
+	#sideEdgeDisplay {
+		width: 100%;
+		display: none;
+	}
+
+	#network-NodepopUp {
+		display: none;
+		position: absolute;
+		height: 500px;
+		width: 323px;
+		background-color: #f9f9f9;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #5394ed;
+		z-index: 999;
+		font-size:16px;
+		border-radius: 6px;
+		padding-left: 8px;
+		padding-right: 8px;
+		padding-bottom: 8px;
+		left: 319px;
+		margin-top: 42px;
+	}
+
+	#network-EdgepopUp {
+		display: none;
+		position: absolute;
+		width: 387px;
+		height: 500px;
+		background-color: #f9f9f9;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #5394ed;
+		z-index: 999;
+		border-radius: 6px;
+		font-size:16px;
+		padding-left: 8px;
+		padding-right: 8px;
+		padding-bottom: 8px;
+		left: 321px;
+		margin-top:62px;
+	}
+
+	#create-popUp {
+		display: none;
+		position: absolute;
+		height: 155px;
+		width: 217px;
+		background-color: #f9f9f9;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #5394ed;
+		z-index: 999;
+		border-radius: 6px;
+		font-size:16px;
+		padding-left: 8px;
+		padding-right: 8px;
+		padding-bottom: 8px;
+		left: 372px;
+		margin-top: 172px;
+	}
+
+	#operationNode, #operationEdge, #operationCreate {
+		padding-top: 17px;
+		margin-bottom: 14px;
+		font-size:16px;
+	}
+
+	.textSpace, .indentSpace {
+		padding-left: 8px;
+	}
+
+	#edgeTable2, #edgeTable3, #edgeTable4 {
+		border-collapse: collapse;
+	}
+
+	.rowWrap, .rowWrap2 {
+		width: 100%;
+	}
+
+	.rowWrap #tdEdgeUnit {
+		width: 70px;
+		margin: 0px;
+	}
+
+	.rowWrap2 #tdEdgeUnit2 {
+		width: 64px;
+		margin-bottom: 8px;
+	}
+
+	.rowWrap #textQuantity {
+		width: 79px;
+		margin: 0px;
+	}
+
+	.rowWrap2 #textQuantity2 {
+		width: 79px;
+		margin-bottom: 8px;
+	}
+
+	.rowWrap #textUOM {
+		width: 86px;
+		margin: 0px;
+	}
+
+	.rowWrap2 #textUOM2 {
+		width: 86px;
+		margin-bottom: 8px;
+	}
+
+	.edge-unit {
+		width: 90px;
+		margin-left: 8px;
+		font-size:16px;
+	}
+
+	.edge-unit2 {
+		width: 90px;
+		margin-left: 8px;
+		margin-bottom: 8px;
+		font-size:16px;
+	}
+
+	#textDescription {
+		width: 79px;
+	}
+
+	.node-label, .node-url,
+	.node-location, .node-userName, .node-userEmail,
+	.node-category, .node-userInfo, .edge-label,
+	.edge-qualitative, .edge-quantified,
+	#file-name {
+		height:20px;
+		font-size:16px;
+		margin-bottom: 8px;
+		margin-left: 8px;
+	}
+	
+	.node-description{
+		height:73px;
+		font-size:16px;
+		margin-bottom: 8px;
+		margin-left: 8px
+	}
+
+	.edge-label{
+		width: 174px;
+	}
+
+	.edge-description {
+		width: 260px;
+		height:73px;
+		font-size:16px;
+		margin-bottom: 8px;
+		margin-left: 8px;
+	}
+
+	.edge-unitOfMeasure, .edge-unitOfMeasure2 {
+		font-size:16px;
+	}
+	
+	.edge-qualitative, .edge-quantified {
+		width:136px;
+	}
+
+	#file-name, .node-label, .node-url, .node-description,
+	.node-location, .node-userName, .node-userEmail {
+		width: 160px;
+	}
+
+	#saveNodeButton, #cancelNodeButton, 
+	#saveEdgeButton, #saveCreateButton, #cancelCreateButton {
+		width: 74px;
+		height: 32px;
+		font-size: 16px;
+		border-style: none;
+		border-radius: 6px;
+		margin-top: 17px;
+		margin-left: 8px;
+		margin-right:8px;
+	}
+
+	.node-description, .edge-description {
+		resize: none;
+	}
+
+	.node-category, .node-userInfo {
+		width: 160px;
+	}
+
+	.visible {
+		visibility: visible;
+	}
+
+	.invisible {
+		visibility: hidden;
+	}
+
+	#loader {
+		display: none;
+		position: absolute;
+		width: 48px;
+		height: 48px;
+		z-index:1;
+		border: 16px solid #f3f3f3;
+		border-radius: 50%;
+		border-top: 16px solid #3498db;
+		top: 292px;
+		left:364px;
+		-webkit-animation: spin 1s linear infinite; /* Safari */
+		animation: spin 1s linear infinite;
+	}
+
+	/* Safari */
+	@-webkit-keyframes spin {
+		0% { -webkit-transform: rotate(0deg); }
+		100% { -webkit-transform: rotate(360deg); }
+	}
+
+	@keyframes spin {
+		0% { transform: rotate(0deg); }
+		100% { transform: rotate(360deg); }
+	}
+}
+
+@media only screen and (min-device-width:601px) and (max-device-width:960px) { 
+	html, body { 
+		width: 960px;
+		height: 96%;
+	}
+
+	body {
+		background-color: #ffffff;
+		font-family:helvetica, sans-serif;
+		-webkit-user-select: none;     
+		-moz-user-select: none;
+		-ms-user-select: none;
+	}
+
+	h1 {
+		position: absolute;
+		width: 600px;
+		height:30px;
+		font-size:27px;
+		margin-top:8px;
+		margin-left: 6px;
+		text-align: left;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	h2{
+		font-size: 16px;
+		float:left;
+	}
+	
+	#mynetwork {
+		display:inline-block;
+		position:absolute;
+		width: 770px;
+		height: 480px;
+		border: 1px solid #d8d8d8;
+		background-color: #ffffff;
+		top:152px;
+		margin-left: 6px;
+	}
+
+	#topFileDisplay {
+		display:inline-block;
+		position: absolute;
+		height: 25px;
+		width: 500px;
+		margin-top:18px;
+		margin-left:6px;
+		top:40px;
+	}
+
+	#button_container {
+		display:inline-block;
+		position:absolute;
+		text-align: right;
+		width:772px;
+		height: 52px;
+		top: 100px;
+		margin-left:6px;
+		background-color: #e8e8e8;
+	}
+
+	#rename_button {
+		display:inline-block;
+		position:relative;
+		width: 116px;
+		height: 34px;
+		font-size: 16px;
+		border-style: none;
+		border-radius: 6px;
+		padding: 2px 2px 2px 2px;
+	}
+	
+	#new_button {
+		float: left;
+	}
+	
+	#load_button{
+		float:left;
+	}
+	
+	#share_button{
+		float:left;
+	}
+	
+	#auth_button {
+		float: right;
+	}
+
+	#auth_button, #new_button, #load_button, #share_button {
+		background-color: #e8e8e8;
+		display:inline-block;
+		width: 100px;
+		height: 52px;
+		font-size: 16px;
+		border-style: none;
+	}
+
+	#rename_button:hover, #auth_button:hover, #new_button:hover, 
+	#load_button:hover, #share_button:hover, #saveNodeButton:hover, 
+	#cancelNodeButton:hover, #saveEdgeButton:hover, #saveCreateButton:hover, #cancelCreateButton:hover {
+		background-color:#d0d0d0;
+	}
+
+	#rename_button:focus, #auth_button:focus, #new_button:focus, 
+	#load_button:focus, #share_button:focus, #saveNodeButton:focus, 
+	#cancelNodeButton:focus, #saveEdgeButton:focus, #saveCreateButton:focus, #cancelCreateButton:focus {
+		outline: 0;
+	}
+
+	#operationCreate {
+		display:inline-block;
+		width: 100%;
+		height: 8px;
+		padding-bottom: 17px;
+		text-align: center;
+	}
+
+	#formBackground {
+		display:none;
+		width:100%;
+		height:100%;
+		position:fixed;
+		z-index: 3;
+		background-color: rgba(255, 255, 255, 0.4);
+		top:0;
+		left:0;
+	}
+
+	#display_container {
+		display:none;
+		position: absolute;
+		z-index:1;
+		top: 100px;
+		left: 810px;
+		width: 201px;
+		font-size: 14px;
+		border: 1px solid #000000;
+		border-radius: 6px;
+		padding-bottom: 8px;
+		word-wrap: break-word;
+		word-break: break-word;
+		background-color: #ffffff;
+		overflow: hidden;
+		clear: both;
+	}
+
+	#operationSideNodeDisplay {
+		display:inline-block;
+		width: 100%;
+		height: 19px;
+		text-align: center;
+	}
+
+	#operationSideEdgeDisplay {
+		display:inline-block;
+		width: 100%;
+		height: 14px;
+		text-align: center;
+	}
+
+	#operationNode {
+		display:inline-block;
+		width: 100%;
+		height: 14px;
+		padding-bottom: 28px;
+		text-align: center;
+	}
+
+	#operationEdge {
+		display:inline-block;
+		width: 100%;
+		height: 14px;
+		padding-bottom: 28px;
+		text-align: center;
+	}
+
+	#sideNodeDisplay {
+		width:100%;
+		display: none;
+	}
+
+	#sideEdgeDisplay {
+		width: 100%;
+		display: none;
+	}
+
+	#network-NodepopUp {
+		display: none;
+		position: absolute;
+		height: 500px;
+		width: 323px;
+		background-color: #f9f9f9;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #5394ed;
+		z-index: 999;
+		font-size:16px;
+		border-radius: 6px;
+		padding-left: 8px;
+		padding-right: 8px;
+		padding-bottom: 8px;
+		left: 319px;
+		margin-top: 42px;
+	}
+
+	#network-EdgepopUp {
+		display: none;
+		position: absolute;
+		width: 387px;
+		height: 500px;
+		background-color: #f9f9f9;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #5394ed;
+		z-index: 999;
+		border-radius: 6px;
+		font-size:16px;
+		padding-left: 8px;
+		padding-right: 8px;
+		padding-bottom: 8px;
+		left: 321px;
+		margin-top:62px;
+	}
+
+	#create-popUp {
+		display: none;
+		position: absolute;
+		height: 155px;
+		width: 217px;
+		background-color: #f9f9f9;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #5394ed;
+		z-index: 999;
+		border-radius: 6px;
+		font-size:16px;
+		padding-left: 8px;
+		padding-right: 8px;
+		padding-bottom: 8px;
+		left: 372px;
+		margin-top: 172px;
+	}
+
+	#operationNode, #operationEdge, #operationCreate {
+		padding-top: 17px;
+		margin-bottom: 14px;
+		font-size:16px;
+	}
+
+	.textSpace, .indentSpace {
+		padding-left: 8px;
+	}
+
+	#edgeTable2, #edgeTable3, #edgeTable4 {
+		border-collapse: collapse;
+	}
+
+	.rowWrap, .rowWrap2 {
+		width: 100%;
+	}
+
+	.rowWrap #tdEdgeUnit {
+		width: 70px;
+		margin: 0px;
+	}
+
+	.rowWrap2 #tdEdgeUnit2 {
+		width: 64px;
+		margin-bottom: 8px;
+	}
+
+	.rowWrap #textQuantity {
+		width: 79px;
+		margin: 0px;
+	}
+
+	.rowWrap2 #textQuantity2 {
+		width: 79px;
+		margin-bottom: 8px;
+	}
+
+	.rowWrap #textUOM {
+		width: 86px;
+		margin: 0px;
+	}
+
+	.rowWrap2 #textUOM2 {
+		width: 86px;
+		margin-bottom: 8px;
+	}
+
+	.edge-unit {
+		width: 90px;
+		margin-left: 8px;
+		font-size:16px;
+	}
+
+	.edge-unit2 {
+		width: 90px;
+		margin-left: 8px;
+		margin-bottom: 8px;
+		font-size:16px;
+	}
+
+	#textDescription {
+		width: 79px;
+	}
+
+	.node-label, .node-url,
+	.node-location, .node-userName, .node-userEmail,
+	.node-category, .node-userInfo, .edge-label,
+	.edge-qualitative, .edge-quantified,
+	#file-name {
+		height:20px;
+		font-size:16px;
+		margin-bottom: 8px;
+		margin-left: 8px;
+	}
+	
+	.node-description{
+		height:73px;
+		font-size:16px;
+		margin-bottom: 8px;
+		margin-left: 8px
+	}
+
+	.edge-label{
+		width: 174px;
+	}
+
+	.edge-description {
+		width: 260px;
+		height:73px;
+		font-size:16px;
+		margin-bottom: 8px;
+		margin-left: 8px;
+	}
+
+	.edge-unitOfMeasure, .edge-unitOfMeasure2 {
+		font-size:16px;
+	}
+	
+	.edge-qualitative, .edge-quantified {
+		width:136px;
+	}
+
+	#file-name, .node-label, .node-url, .node-description,
+	.node-location, .node-userName, .node-userEmail {
+		width: 160px;
+	}
+
+	#saveNodeButton, #cancelNodeButton,
+	#saveEdgeButton, #saveCreateButton, #cancelCreateButton {
+		width: 74px;
+		height: 32px;
+		font-size: 16px;
+		border-style: none;
+		border-radius: 6px;
+		margin-top: 17px;
+		margin-left: 8px;
+		margin-right:8px;
+	}
+
+	.node-description, .edge-description {
+		resize: none;
+	}
+
+	.node-category, .node-userInfo {
+		width: 160px;
+	}
+
+	.visible {
+		visibility: visible;
+	}
+
+	.invisible {
+		visibility: hidden;
+	}
+
+	#loader {
+		display: none;
+		position: absolute;
+		width: 48px;
+		height: 48px;
+		z-index:1;
+		border: 16px solid #f3f3f3;
+		border-radius: 50%;
+		border-top: 16px solid #3498db;
+		top: 292px;
+		left:364px;
+		-webkit-animation: spin 1s linear infinite; /* Safari */
+		animation: spin 1s linear infinite;
+	}
+
+	/* Safari */
+	@-webkit-keyframes spin {
+		0% { -webkit-transform: rotate(0deg); }
+		100% { -webkit-transform: rotate(360deg); }
+	}
+
+	@keyframes spin {
+		0% { transform: rotate(0deg); }
+		100% { transform: rotate(360deg); }
+	}
+}
+
+@media only screen and (max-device-width:600px) {
+	html, body { 
+		width: 960px;
+		height: 96%;
+	}
+
+	body {
+		background-color: #ffffff;
+		font-family:helvetica, sans-serif;
+		-webkit-user-select: none;     
+		-moz-user-select: none;
+		-ms-user-select: none;
+	}
+
+	h1 {
+		position: absolute;
+		width: 600px;
+		height:30px;
+		font-size:27px;
+		margin-top:8px;
+		margin-left: 6px;
+		text-align: left;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	h2{
+		font-size: 16px;
+		float:left;
+	}
+	
+	#mynetwork {
+		display:inline-block;
+		position:absolute;
+		width: 770px;
+		height: 480px;
+		border: 1px solid #d8d8d8;
+		background-color: #ffffff;
+		top:152px;
+		margin-left: 6px;
+	}
+
+	#topFileDisplay {
+		display:inline-block;
+		position: absolute;
+		height: 25px;
+		width: 500px;
+		margin-top:18px;
+		margin-left:6px;
+		top:40px;
+	}
+
+	#button_container {
+		display:inline-block;
+		position:absolute;
+		text-align: right;
+		width:772px;
+		height: 52px;
+		top: 100px;
+		margin-left:6px;
+		background-color: #e8e8e8;
+	}
+
+	#rename_button {
+		display:inline-block;
+		position:relative;
+		width: 116px;
+		height: 34px;
+		font-size: 16px;
+		border-style: none;
+		border-radius: 6px;
+		padding: 2px 2px 2px 2px;
+	}
+	
+	#new_button {
+		float: left;
+	}
+	
+	#load_button{
+		float:left;
+	}
+	
+	#share_button{
+		float:left;
+	}
+	
+	#auth_button {
+		float: right;
+	}
+
+	#auth_button, #new_button, #load_button, #share_button {
+		background-color: #e8e8e8;
+		display:inline-block;
+		width: 100px;
+		height: 52px;
+		font-size: 16px;
+		border-style: none;
+	}
+
+	#rename_button:hover, #auth_button:hover, #new_button:hover, 
+	#load_button:hover, #share_button:hover, #saveNodeButton:hover, 
+	#cancelNodeButton:hover, #saveEdgeButton:hover, #saveCreateButton:hover, #cancelCreateButton:hover {
+		background-color:#d0d0d0;
+	}
+
+	#rename_button:focus, #auth_button:focus, #new_button:focus, 
+	#load_button:focus, #share_button:focus, #saveNodeButton:focus, 
+	#cancelNodeButton:focus, #saveEdgeButton:focus, #saveCreateButton:focus, #cancelCreateButton:focus {
+		outline: 0;
+	}
+
+	#operationCreate {
+		display:inline-block;
+		width: 100%;
+		height: 8px;
+		padding-bottom: 17px;
+		text-align: center;
+	}
+
+	#formBackground {
+		display:none;
+		width:100%;
+		height:100%;
+		position:fixed;
+		z-index: 3;
+		background-color: rgba(255, 255, 255, 0.4);
+		top:0;
+		left:0;
+	}
+
+	#display_container {
+		display:none;
+		position: absolute;
+		z-index:1;
+		top: 100px;
+		left: 810px;
+		width: 201px;
+		font-size: 14px;
+		border: 1px solid #000000;
+		border-radius: 6px;
+		padding-bottom: 8px;
+		word-wrap: break-word;
+		word-break: break-word;
+		background-color: #ffffff;
+		overflow: hidden;
+		clear: both;
+	}
+
+	#operationSideNodeDisplay {
+		display:inline-block;
+		width: 100%;
+		height: 19px;
+		text-align: center;
+	}
+
+	#operationSideEdgeDisplay {
+		display:inline-block;
+		width: 100%;
+		height: 14px;
+		text-align: center;
+	}
+
+	#operationNode {
+		display:inline-block;
+		width: 100%;
+		height: 14px;
+		padding-bottom: 28px;
+		text-align: center;
+	}
+
+	#operationEdge {
+		display:inline-block;
+		width: 100%;
+		height: 14px;
+		padding-bottom: 28px;
+		text-align: center;
+	}
+
+	#sideNodeDisplay {
+		width:100%;
+		display: none;
+	}
+
+	#sideEdgeDisplay {
+		width: 100%;
+		display: none;
+	}
+
+	#network-NodepopUp {
+		display: none;
+		position: absolute;
+		height: 500px;
+		width: 323px;
+		background-color: #f9f9f9;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #5394ed;
+		z-index: 999;
+		font-size:16px;
+		border-radius: 6px;
+		padding-left: 8px;
+		padding-right: 8px;
+		padding-bottom: 8px;
+		left: 319px;
+		margin-top: 42px;
+	}
+
+	#network-EdgepopUp {
+		display: none;
+		position: absolute;
+		width: 387px;
+		height: 500px;
+		background-color: #f9f9f9;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #5394ed;
+		z-index: 999;
+		border-radius: 6px;
+		font-size:16px;
+		padding-left: 8px;
+		padding-right: 8px;
+		padding-bottom: 8px;
+		left: 321px;
+		margin-top:62px;
+	}
+
+	#create-popUp {
+		display: none;
+		position: absolute;
+		height: 155px;
+		width: 217px;
+		background-color: #f9f9f9;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #5394ed;
+		z-index: 999;
+		border-radius: 6px;
+		font-size:16px;
+		padding-left: 8px;
+		padding-right: 8px;
+		padding-bottom: 8px;
+		left: 372px;
+		margin-top: 172px;
+	}
+
+	#operationNode, #operationEdge, #operationCreate {
+		padding-top: 17px;
+		margin-bottom: 14px;
+		font-size:16px;
+	}
+
+	.textSpace, .indentSpace {
+		padding-left: 8px;
+	}
+
+	#edgeTable2, #edgeTable3, #edgeTable4 {
+		border-collapse: collapse;
+	}
+
+	.rowWrap, .rowWrap2 {
+		width: 100%;
+	}
+
+	.rowWrap #tdEdgeUnit {
+		width: 70px;
+		margin: 0px;
+	}
+
+	.rowWrap2 #tdEdgeUnit2 {
+		width: 64px;
+		margin-bottom: 8px;
+	}
+
+	.rowWrap #textQuantity {
+		width: 79px;
+		margin: 0px;
+	}
+
+	.rowWrap2 #textQuantity2 {
+		width: 79px;
+		margin-bottom: 8px;
+	}
+
+	.rowWrap #textUOM {
+		width: 86px;
+		margin: 0px;
+	}
+
+	.rowWrap2 #textUOM2 {
+		width: 86px;
+		margin-bottom: 8px;
+	}
+
+	.edge-unit {
+		width: 90px;
+		margin-left: 8px;
+		font-size:16px;
+	}
+
+	.edge-unit2 {
+		width: 90px;
+		margin-left: 8px;
+		margin-bottom: 8px;
+		font-size:16px;
+	}
+
+	#textDescription {
+		width: 79px;
+	}
+
+	.node-label, .node-url,
+	.node-location, .node-userName, .node-userEmail,
+	.node-category, .node-userInfo, .edge-label,
+	.edge-qualitative, .edge-quantified,
+	#file-name {
+		height:20px;
+		font-size:16px;
+		margin-bottom: 8px;
+		margin-left: 8px;
+	}
+	
+	.node-description{
+		height:73px;
+		font-size:16px;
+		margin-bottom: 8px;
+		margin-left: 8px
+	}
+
+	.edge-label{
+		width: 174px;
+	}
+
+	.edge-description {
+		width: 260px;
+		height:73px;
+		font-size:16px;
+		margin-bottom: 8px;
+		margin-left: 8px;
+	}
+
+	.edge-unitOfMeasure, .edge-unitOfMeasure2 {
+		font-size:16px;
+	}
+	
+	.edge-qualitative, .edge-quantified {
+		width:136px;
+	}
+
+	#file-name, .node-label, .node-url, .node-description,
+	.node-location, .node-userName, .node-userEmail {
+		width: 160px;
+	}
+
+	#saveNodeButton, #cancelNodeButton,
+	#saveEdgeButton, #saveCreateButton, #cancelCreateButton {
+		width: 74px;
+		height: 32px;
+		font-size: 16px;
+		border-style: none;
+		border-radius: 6px;
+		margin-top: 17px;
+		margin-left: 8px;
+		margin-right:8px;
+	}
+
+	.node-description, .edge-description {
+		resize: none;
+	}
+
+	.node-category, .node-userInfo {
+		width: 160px;
+	}
+
+	.visible {
+		visibility: visible;
+	}
+
+	.invisible {
+		visibility: hidden;
+	}
+
+	#loader {
+		display: none;
+		position: absolute;
+		width: 48px;
+		height: 48px;
+		z-index:1;
+		border: 16px solid #f3f3f3;
+		border-radius: 50%;
+		border-top: 16px solid #3498db;
+		top: 292px;
+		left:364px;
+		-webkit-animation: spin 1s linear infinite; /* Safari */
+		animation: spin 1s linear infinite;
+	}
+
+	/* Safari */
+	@-webkit-keyframes spin {
+		0% { -webkit-transform: rotate(0deg); }
+		100% { -webkit-transform: rotate(360deg); }
+	}
+
+	@keyframes spin {
+		0% { transform: rotate(0deg); }
+		100% { transform: rotate(360deg); }
+	}
+}
